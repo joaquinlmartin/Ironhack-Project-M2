@@ -64,13 +64,8 @@ Poke model
 | `GET`      | `auth/signup`                       | Renders `signup` options.                                    | 201            | 404          |                        |
 | `GET`      | `auth/signup-user`                  | Renders `signup` form view for user.                         | 201            | 404          |                        |
 | `POST`     | `auth/signup-user`                  | Sends Sign Up info to the server and creates promoter user in the DB. | 201            | 404          | { email, password }    |         |
-| `GET`      | `/private/promoterprofile`          | Shows promoter profile details with bookings                 |                |              |                        |
-| `GET`      | `/private/edit-promoterprofile`     | Private route. Shows`edit-promoter profile` form.            |                |              |                        |
-| `PUT`      | `/private/edit-promoterprofile`     | Private route. Sends edit-profile info to server and updates promoter user in DB. | 200            | 400          | JSON                   |
-| `DELETE`   | ``/private/delete-promoterprofile`` | Delete profile                                               | 201            | 400          | {id}                  
-| `POST`     | `/private/logout`                   | Logs out the user                                            | 204            | 400          |                        |
-| `GET`      | `/search`                           | Shows search form                                            | 200            | 400          |                        |
-| `POST`     | `/search`                           | Shows venue's results                                        |                |              | {city, capacity, date} |
+| `GET`      | `/private/userprofile`              | Shows user profile details with cards                        |                |              |                        |
+| `GET`      | `/private/edit-userprofile`         | Private route. Shows`edit-promoter user` form.               |                |              |               
                  
 
 <br>
