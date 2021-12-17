@@ -58,14 +58,14 @@ Poke model
 |            |                                     |                                                              |                |              |                        |
 | ---------- | ----------------------------------- | ------------------------------------------------------------ | -------------- | ------------ | ---------------------- |
 | **Method** | **Route**                           | **Description**                                              | Success status | Error status | Request - Body         |
-| `GET`      | `/`                                 | Main page route.                                             |                |              |                        |
+| `GET`      | `/`                                 | Main Pokemon page route.                                             |                |              |                        |
 | `GET`      | `auth/login`                        | Renders `login` form view.                                   |                |              |                        |
 | `POST`     | `auth//login`                       | Sends Login form data to the server.                         | 200            | 401          | { email, password }    |
 | `GET`      | `auth/signup`                       | Renders `signup` options.                                    | 201            | 404          |                        |
 | `GET`      | `auth/signup-user`                  | Renders `signup` form view for user.                         | 201            | 404          |                        |
-| `POST`     | `auth/signup-user`                  | Sends Sign Up info to the server and creates promoter user in the DB. | 201            | 404          | { email, password }    |         |
+| `POST`     | `auth/signup-user`                  | Sends Sign Up info to the server and creates user in the DB  | 201            | 404          | { email, password }    |         |
 | `GET`      | `/private/userprofile`              | Shows user profile details with cards                        |                |              |                        |
-| `GET`      | `/private/edit-userprofile`         | Private route. Shows`edit-profile user` form.               |                |              |               
+| `GET`      | `/private/edit-userprofile`         | Private route. Shows`edit-profile user` form                 |                |              |               
                  
 
 <br>
