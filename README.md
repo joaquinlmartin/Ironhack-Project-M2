@@ -18,12 +18,12 @@ A pokemon searching cards app
 
 ## Requirements
 ### Authentication
--
- - Auth Service
- - auth.login(user)
- - auth.signup(user)
- - auth.logout()
- - auth.getUser() // synchronous
+
+- Auth Service
+- auth.login(user)
+- auth.signup(user)
+- auth.logout()
+- auth.getUser() // synchronous
 
 ### Modelos
 ```js
