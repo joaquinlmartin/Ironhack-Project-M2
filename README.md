@@ -25,27 +25,28 @@ auth.logout()
 auth.getUser() // synchronous
 
 ### Modelos
-User model​
+User model
 
 {
-    firstName: String,
-    lastName: String,
+    userName: String,
     email: String,
     hashedPassword: String,
-    age: Number
 }
 
-Post model
-​
+Poke model
 
 { 
-	userID: Number,
+	cardID: Number,
 	image: String,
 	name: String ,
+	element: String,
 	description: String,
-	date: Number,
-	theme: String,
-	creator: String,
+	atributo1: String,
+	atributo2: String,
+	atributo3: String,
+	skill: String,
+	ability: String,
+	clase: String,
 
 }
 
