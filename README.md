@@ -76,4 +76,4 @@ Poke model
 -  Meeting point trough the map view
 
 ## Links
-https://github.com/joaquinlmartin/Project-M2/edit/main/README.md
+https://github.com/joaquinlmartin/Project-M2
