@@ -65,7 +65,7 @@ Poke model
 | `GET`      | `auth/signup-user`                  | Renders `signup` form view for user.                         | 201            | 404          |                        |
 | `POST`     | `auth/signup-user`                  | Sends Sign Up info to the server and creates promoter user in the DB. | 201            | 404          | { email, password }    |         |
 | `GET`      | `/private/userprofile`              | Shows user profile details with cards                        |                |              |                        |
-| `GET`      | `/private/edit-userprofile`         | Private route. Shows`edit-promoter user` form.               |                |              |               
+| `GET`      | `/private/edit-userprofile`         | Private route. Shows`edit-profile user` form.               |                |              |               
                  
 
 <br>
