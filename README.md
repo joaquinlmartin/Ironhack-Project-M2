@@ -24,7 +24,7 @@ A pokemon searching cards app where people can share Pokemon cards and collect y
 - auth.logout()
 - auth.getUser() // synchronous
 
-### Modelos
+### Models
 ```js
 User model
 
@@ -42,17 +42,17 @@ Poke model
 	name: String ,
 	element: String,
 	description: String,
-	atributo1: String,
-	atributo2: String,
-	atributo3: String,
+	atribute1: String,
+	atribute2: String,
+	atribute3: String,
 	skill: String,
 	ability: String,
-	clase: String,
+	class: String,
 
 }
 ```
 
-## Rutas
+## Routes
 
 
 |            |                                     |                                                              |                |              |                        |
