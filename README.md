@@ -1,4 +1,6 @@
-# Project-M2
+# Project's name
+
+Ironhack-Project-M2
 
 ## Description 
 
