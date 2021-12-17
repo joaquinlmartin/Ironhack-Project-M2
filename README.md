@@ -50,7 +50,7 @@ Poke model
 	clase: String,
 
 }
-```js
+```
 
 ## Rutas
 
