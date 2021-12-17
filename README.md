@@ -2,7 +2,7 @@
 
 ## Description 
 
-A pokemon searching cards app
+A pokemon searching cards app where people can share Pokemon cards and collect your favorites ones and show in your profile.
 
 ## User Actions
 
