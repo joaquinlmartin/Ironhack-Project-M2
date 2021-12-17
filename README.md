@@ -25,7 +25,7 @@ auth.logout()
 auth.getUser() // synchronous
 
 ### Modelos
-```
+```js
 User model
 
 {
@@ -50,7 +50,7 @@ Poke model
 	clase: String,
 
 }
-```
+```js
 
 ## Rutas
 
