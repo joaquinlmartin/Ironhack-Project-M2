@@ -24,21 +24,30 @@ auth.signup(user)
 auth.logout()
 auth.getUser() // synchronous
 
-### CRUD
-
-venue.list()
-venue.detail(id)
-venue.edit(id)
-venue.delete(id)
-Promoter Service
-promoter.detail(id)
-promoter.edit(id)
-promoter.delete(id)
-
-
-
 ### Modelos
+User model​
 
+{
+    firstName: String,
+    lastName: String,
+    email: String,
+    hashedPassword: String,
+    age: Number
+}
+
+Post model
+​
+
+{ 
+	userID: Number,
+	image: String,
+	name: String ,
+	description: String,
+	date: Number,
+	theme: String,
+	creator: String,
+
+}
 
 
 ## Rutas
