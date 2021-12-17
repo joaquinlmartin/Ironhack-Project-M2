@@ -1,6 +1,6 @@
 # Project's name
 
-Ironhack-Project-M2
+*Ironhack-Project-M2*
 
 ## Description 
 
