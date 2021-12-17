@@ -72,6 +72,7 @@ Poke model
 
 ## Backlog
 
-
+-  Social Network
+-  Meeting point trough the map view
 
 
