@@ -63,9 +63,7 @@ Poke model
 | `POST`     | `auth//login`                       | Sends Login form data to the server.                         | 200            | 401          | { email, password }    |
 | `GET`      | `auth/signup`                       | Renders `signup` options.                                    | 201            | 404          |                        |
 | `GET`      | `auth/signup-user`                  | Renders `signup` form view for user.                         | 201            | 404          |                        |
-| `POST`     | `auth/signup-user`                  | Sends Sign Up info to the server and creates promoter user in the DB. | 201            | 404          | { email, password }    |
-| `GET`      | `auth/signup-user`                  | Sign up page for venues.                                     | 201            | 404          |                        |
-| `POST`     | `auth/signup-venue`                 | Sends Sign Up info to the server and creates  venue user in the DB. | 201            | 404          | { email, password }    |
+| `POST`     | `auth/signup-user`                  | Sends Sign Up info to the server and creates promoter user in the DB. | 201            | 404          | { email, password }    |         |
 | `GET`      | `/private/promoterprofile`          | Shows promoter profile details with bookings                 |                |              |                        |
 | `GET`      | `/private/edit-promoterprofile`     | Private route. Shows`edit-promoter profile` form.            |                |              |                        |
 | `PUT`      | `/private/edit-promoterprofile`     | Private route. Sends edit-profile info to server and updates promoter user in DB. | 200            | 400          | JSON                   |
