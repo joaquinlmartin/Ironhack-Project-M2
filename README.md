@@ -50,7 +50,6 @@ Poke model
 	skill: String,
 	ability: String,
 	class: String,
-
 }
 ```
 
