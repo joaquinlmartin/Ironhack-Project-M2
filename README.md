@@ -1,6 +1,8 @@
 # Project's name
 
 *Ironhack-Project-M2*
+*Pokkemon App*
+*Version JS*
 
 ## Description 
 
@@ -36,7 +38,7 @@ User model
     hashedPassword: String,
 }
 
-Poke model
+Card Poke model
 
 { 
 	cardID: Number,
