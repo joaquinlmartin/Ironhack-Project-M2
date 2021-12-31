@@ -36,7 +36,7 @@ User model
     hashedPassword: String,
 }
 
-Poke model
+Card Poke model
 
 { 
 	cardID: Number,
