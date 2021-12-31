@@ -2,7 +2,7 @@ const router = require("express").Router();
 const User = require("./../models/User.model");
 const bcrypt = require('bcryptjs');
 const isLoggedIn = require('../middlewares/isLoggedIn');
-const { route } = require("express/lib/application");
+const { router } = require("express/lib/application");
 
 const SALT_ROUNDS = 10;
 
@@ -19,19 +19,22 @@ router.post('/signup', async (req, res, next) => {
     const passwordMissing = !password || password === "";
     const emailMissing = !email || email === "";
 
+    
+
     if (usernameMissing || passwordMissing || emailMissing) {
         res.render('signup', {
             errorMessage: 'Please insert username, email and password'
         })
         return;
-    }
+      }
     const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
 
     if(!regex.test(password)) {
         res.status(400).render('signup', { errorMessage: 'Password not secure, try another one' });
         return;
     }
-    const dbUser = await User.findOne({ username: username })
+      try {
+       const dbUser = await User.findOne({ username: username })
         .then((theUser) => {
             if (theUser) {
                 throw new Error('You have to choose another username!')
@@ -47,9 +50,11 @@ router.post('/signup', async (req, res, next) => {
         .then((createdUser) => {
             res.redirect('/');
         })
-        .cath((err) => {
-            res.render('signup', {errorMessage: err.message || 'Error while trying to sign up'})
-        })
+    } catch (err) {
+         res.render('signup', {errorMessage: err.message || 'Error while trying to sign up'});
+        
+          next(err);
+      }
 })
 
 // GET login
@@ -58,7 +63,7 @@ router.get('/login', (req, res) => {
 })
 
 //POST login
-router.post('/login', (req, res) => {
+router.post('/login', async (req, res) => {
     const { username, password } = req.body;
     
     const usernameMissing = !username || username === '';
@@ -70,7 +75,9 @@ router.post('/login', (req, res) => {
         })
     }
     let user;
-    User.findOne({ username: username })
+    try {
+     await User.findOne({ username: username })
+
         .then((existsUser) => {
             user = existsUser;
             if (!existsUser) {
@@ -86,9 +93,10 @@ router.post('/login', (req, res) => {
                 res.redirect('/');
             }
         })
-        .catch((err) => {
+    }
+        catch (err)  {
             res.render('signup', { errorMessage: err.message || 'Please introduce username and password.'})
-        });
+        };
 })
 
 // GET logout
