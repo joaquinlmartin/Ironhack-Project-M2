@@ -1,6 +1,8 @@
 # Project's name
 
 *Ironhack-Project-M2*
+*Pokkemon App*
+*Version JS*
 
 ## Description 
 
