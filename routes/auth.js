@@ -109,8 +109,8 @@ router.get('/logout', isLoggedIn, (req, res) => {
     })
 })
 
-router.get('/private', isLoggedIn, (req, res) => {
-    res.render('private');
+router.get('/user.profile', isLoggedIn, (req, res) => {
+    res.render('user/user.profile', { userInSession: req.session.user });
 })
 
 module.exports = router;
