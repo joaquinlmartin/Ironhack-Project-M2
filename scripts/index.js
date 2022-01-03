@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/course-db';
+const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/Ironhack-Project-M2';
 
 const runScript = async () => {
   try {
