@@ -1,0 +1,35 @@
+<div>
+    <form action="/cards/{{card.id}}/edit" method="post">
+        <h2>Update the card</h2>
+
+        <label> {{card.name}}
+            <input type="text" name= "name" value="{{card.name}}">
+        </label>
+
+        <label> Element:
+            <input type="text" name="element" value="{{card.element}}">
+        </label>
+
+        <label> Description:
+            <input type="text" name="description" value="{{card.description}}">
+        </label>
+
+        <label> Strength:
+            <input type="number" name="strength" value="{{card.strength}}">
+        </label>
+
+        <label> Health:
+            <input type="number" name="health" value="{{card.health}}">
+        </label>
+
+        <label> Skill:
+            <input type="text" name="skill" value="{{card.skill}}">
+        </label>
+
+        <label> Ability:
+            <input type="text" name="ability" value="{{card.ability}}">
+        </label>
+
+        <button type="submit">Update your Card</button>
+    </form>
+</div>
