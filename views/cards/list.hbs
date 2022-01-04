@@ -1,0 +1,23 @@
+<h2>Available cards</h2>
+
+<a href="/cards/create">Create Card</a>
+
+<div class="list">
+    {{#each cards}}
+
+    <div class='cards-create-list'>
+        <h3>Name: {{name}}</h3>
+        <h3>Element: {{element}}</h3>
+        <h3>Description: {{description}}</h3>
+        <h3>Strength: {{strength}}</h3>
+        <h3>Health: {{health}}</h3>
+        <h3>Skill: {{skill}}</h3>
+        <h3>Ability: {{ability}}</h3>
+        <a href='/cards/{{_id}}/edit'>Edit Card</a>
+        <br>
+        <form action='/cards/{{_id}}/delete' method="post">
+            <button>Delete card</button>
+        </form>
+    </div>
+    {{/each}}
+</div>
