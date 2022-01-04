@@ -4,6 +4,8 @@ router.use(express.json())
 
 const Card = require("../models/Card.model")
 
+// isLoggedIn, (en router.)
+
 router.get('/cards', (req, res, next) => {
 
     Card.find({})
