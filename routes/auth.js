@@ -25,7 +25,7 @@ router.post('/signup', async (req, res, next) => {
       }
     const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
     if(!regex.test(password)) {
-        return res.status(400).render('signup', { errorMessage: 'Password not secure, try another one' }); 
+        return res.status(400).render('auth/signup', { errorMessage: 'Password not secure, try another one' }); 
     }
       try {
        const dbUser = await User.findOne({ username: username })
@@ -37,8 +37,8 @@ router.post('/signup', async (req, res, next) => {
        await User.create({ username, email, hashedPassword });
        return res.redirect('/');
        } catch (err) {
-        // Hacer un console.log del err a ver si tiene message tal cual
-          res.render('signup', {errorMessage: err.message || 'Error while trying to sign up'});
+        console.log(err);
+          res.render('auth/signup', {errorMessage: err.message || 'Error while trying to sign up'});
           next(err);
       }
 })
