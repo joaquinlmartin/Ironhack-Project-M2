@@ -1,58 +1,45 @@
-const router = require("express").Router();
-const User = require("./../models/User.model");
+const express = require("express");
+const User = require("../models/user");
 const bcrypt = require('bcryptjs');
-const isLoggedIn = require('../middlewares/isLoggedIn');
-const { router } = require("express/lib/application");
+const isLoggedIn = require('../middlewares');
+//const { router } = require("express/lib/application");
 
 const SALT_ROUNDS = 10;
 
+function authRoutes(){
+    const router = express.Router();
+
 // GET signup
 router.get('/signup', (req, res) => {
-    res.render('signup');
+    res.render('auth/signup');
 })
 
 // POST signup
 router.post('/signup', async (req, res, next) => {
+    // Mirar que en la vista pida el mail
     const { username, email, password } = req.body;
-
     const usernameMissing = !username || username === "";
     const passwordMissing = !password || password === "";
     const emailMissing = !email || email === "";
-
-    
-
     if (usernameMissing || passwordMissing || emailMissing) {
-        res.render('signup', {
-            errorMessage: 'Please insert username, email and password'
-        })
-        return;
+            return res.render('signup', { errorMessage: 'Please insert username, email and password'})
       }
     const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
-
     if(!regex.test(password)) {
-        res.status(400).render('signup', { errorMessage: 'Password not secure, try another one' });
-        return;
+        return res.status(400).render('signup', { errorMessage: 'Password not secure, try another one' }); 
     }
       try {
        const dbUser = await User.findOne({ username: username })
-        .then((theUser) => {
-            if (theUser) {
-                throw new Error('You have to choose another username!')
-            }
-            return bcrypt.genSalt(SALT_ROUNDS);
-        })
-        .then((salt) => {
-            return bcrypt.hash(password, salt);
-        })
-        .then(hashedPassword => {
-            return User.create({ username: username, password: hashedPassword });
-        })
-        .then((createdUser) => {
-            res.redirect('/');
-        })
-    } catch (err) {
-         res.render('signup', {errorMessage: err.message || 'Error while trying to sign up'});
-        
+        if (dbUser) {
+            throw new Error('You have to choose another username!')
+        }
+       const salt = await bcrypt.genSalt(SALT_ROUNDS);
+       const hashedPassword = await bcrypt.hash(password, salt);
+       await User.create({ username, email, hashedPassword });
+       return res.redirect('/');
+       } catch (err) {
+        // Hacer un console.log del err a ver si tiene message tal cual
+          res.render('signup', {errorMessage: err.message || 'Error while trying to sign up'});
           next(err);
       }
 })
@@ -64,37 +51,29 @@ router.get('/login', (req, res) => {
 
 //POST login
 router.post('/login', async (req, res) => {
+    // Pedir mail en vez de username en vista y en ruta
     const { username, password } = req.body;
-    
     const usernameMissing = !username || username === '';
     const passwordMissing = !password || password === '';
-
     if (usernameMissing && passwordMissing) {
         return res.render('auth/login-form', {
             errorMessage: 'Please introduce username and password.',
         })
     }
-    let user;
     try {
-     await User.findOne({ username: username })
-
-        .then((existsUser) => {
-            user = existsUser;
-            if (!existsUser) {
+        // Mail
+     const foundUser = await User.findOne({ username: username })
+            if (!foundUser) {
+                throw new Error('User does not exit in our database');
+            } else {
+                const credentials = bcrypt.compare(password, foundUser.hashedPassword);
+                if (!credentials) {
                 throw new Error('Wrong credentials!');
-            }
-            return bcrypt.compare(password, existsUser.password);
-        })
-        .then ((isCorrectPassword) => {
-            if (!isCorrectPassword) {
-                throw new Error('Wrong credentials!');
-            } else if (isCorrectPassword) {
-                req.session.user = user;
-                res.redirect('/');
-            }
-        })
-    }
-        catch (err)  {
+                }
+            } 
+            req.session.currentUser = foundUser;
+            res.redirect('/');
+        } catch (err)  {
             res.render('signup', { errorMessage: err.message || 'Please introduce username and password.'})
         };
 })
@@ -113,4 +92,7 @@ router.get('/user.profile', isLoggedIn, (req, res) => {
     res.render('user/user.profile', { userInSession: req.session.user });
 })
 
-module.exports = router;
+ return router;
+}
+
+module.exports = authRoutes;
