@@ -1,4 +1,5 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+const dotenv = require('dotenv').config();
 const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/Ironhack-Project-M2';
 const Card = require('../models/card');
 
@@ -12,6 +13,7 @@ const cards = [
     useUnifiedTopology: true
     })
     .then(()=>{
+      console.log("Connected to", MONGO_URI);
       return Card.deleteMany();
     })
     .then (()=>{
