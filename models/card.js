@@ -6,9 +6,8 @@ const cardSchema = new mongoose.Schema({
   name: String,
   element: String,
   description: String,
-  strength: Number,
-  health: Number,
-  skill: String,
+  attack: Number,
+  HP: Number,
   ability: String,
 
 });
