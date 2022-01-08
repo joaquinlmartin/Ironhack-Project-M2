@@ -16,7 +16,6 @@ router.get('/signup', (req, res) => {
 
 // POST signup
 router.post('/signup', async (req, res, next) => {
-    // Mirar que en la vista pida el mail
     const { username, email, password } = req.body;
     const usernameMissing = !username || username === "";
     const passwordMissing = !password || password === "";
@@ -46,23 +45,21 @@ router.post('/signup', async (req, res, next) => {
 
 // GET login
 router.get('/login', (req, res) => {
-    res.render('/login');
+    res.render('auth/login');
 })
 
 //POST login
 router.post('/login', async (req, res) => {
-    // Pedir mail en vez de username en vista y en ruta
-    const { username, password } = req.body;
-    const usernameMissing = !username || username === '';
+    const { email, password } = req.body;
+    const emailMissing = !email || email === '';
     const passwordMissing = !password || password === '';
-    if (usernameMissing && passwordMissing) {
-        return res.render('auth/login-form', {
-            errorMessage: 'Please introduce username and password.',
+    if (emailMissing && passwordMissing) {
+        return res.render('auth/login', {
+            errorMessage: 'Please introduce email and password.',
         })
     }
     try {
-        // Mail
-     const foundUser = await User.findOne({ username: username })
+     const foundUser = await User.findOne({ email })
             if (!foundUser) {
                 throw new Error('User does not exit in our database');
             } else {
@@ -74,7 +71,7 @@ router.post('/login', async (req, res) => {
             req.session.currentUser = foundUser;
             res.redirect('/');
         } catch (err)  {
-            res.render('signup', { errorMessage: err.message || 'Please introduce username and password.'})
+            res.render('signup', { errorMessage: err.message || 'Please introduce email and password.'})
         };
 })
 

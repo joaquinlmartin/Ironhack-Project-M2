@@ -2,10 +2,10 @@
   <h1>{{title}}</h1>
   <h2>Login!</h2>
   <form action='/login' method='POST'>
-    <label for='username'> Username </label>
-    <input type='text' name='username' placeholder='Your username goes here!'/>
+    <label for='email'> Email </label>
+    <input type='email' name='email' placeholder='Your email go here!'/>
     <label for='password'> Password </label>
-    <input type='password' name='password' placeholder='Your password goes here!'/>
+    <input type='password' name='password' placeholder='Your password go here!'/>
     <button type='submit'>Create account</button>
     {{#if errorMessage}}
       <p>{{errorMessage}}</p>
