@@ -29,9 +29,10 @@ router.post('/signup', async (req, res, next) => {
     }
       try {
        const dbUser = await User.findOne({ username: username })
-        if (dbUser) {
-            throw new Error('You have to choose another username!')
-        }
+        // Anulado porque da error el signup(se cambió por el async-await) 
+        // if (dbUser) {
+        //     throw new Error('You have to choose another username!')
+        // }
        const salt = await bcrypt.genSalt(SALT_ROUNDS);
        const hashedPassword = await bcrypt.hash(password, salt);
        await User.create({ username, email, hashedPassword });
