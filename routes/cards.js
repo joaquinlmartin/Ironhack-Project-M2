@@ -17,7 +17,7 @@ router.get('/cards', isLoggedIn, (req, res, next) => {
         .catch(error => next(error));
 });
 
-router.get('/cards/create', (req, res, next) => {
+router.get('/cards/create', isLoggedIn, (req, res, next) => {
 
     Card.create()
         .then((card) => {
@@ -26,7 +26,7 @@ router.get('/cards/create', (req, res, next) => {
         .catch(error => next(error));
 });
 
-router.post('/cards/create', (req, res, next) => {
+router.post('/cards/create', isLoggedIn, (req, res, next) => {
     const { image, name, element, description, attack, HP, ability } = req.body;
     Card.create({ image, name, element, description, attack, HP, ability })
         .then(() => {
@@ -35,7 +35,7 @@ router.post('/cards/create', (req, res, next) => {
         .catch(error => next(error));
 });
 
-router.get('/cards/:id/edit', (req, res, next) => {
+router.get('/cards/:id/edit', isLoggedIn, (req, res, next) => {
 
     const { id } = req.params;
     Card.findById(id)
@@ -45,7 +45,7 @@ router.get('/cards/:id/edit', (req, res, next) => {
         .catch(error => next(error));
 });
 
-router.post('/cards/:id/edit', (req, res, next) => {
+router.post('/cards/:id/edit', isLoggedIn, (req, res, next) => {
 
     const { id } = req.params;
     const { image, name, element, description, attack, HP, ability } = req.body;
@@ -56,7 +56,7 @@ router.post('/cards/:id/edit', (req, res, next) => {
         .catch(error => next(error));
 });
 
-router.post('/cards/:id/delete', (req, res, next) => {
+router.post('/cards/:id/delete', isLoggedIn, (req, res, next) => {
 
     const { id } = req.params;
     Card.findByIdAndDelete(id)
