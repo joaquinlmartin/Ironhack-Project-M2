@@ -1,14 +1,14 @@
 <div>
   <h1>{{title}}</h1>
-  <p>Sign In!</p>
-  <form action=‘/auth/signup’ method=‘POST’>
-    <label for=‘username’> Username
-    <input type=‘text’ name=‘username’ placeholder=‘Choose your username!’/>
-    </label>
-    <label for=‘password’> Password
-    <input type=‘password’ name=‘password’ placeholder=‘Choose your password!’/>
-    </label>
-    <button type=‘submit’>Sign up</button>
+  <h2>Sign In!</h2>
+  <form action='/signup' method='POST'>
+    <label for='username'> Username </label>
+    <input type='text' name='username' placeholder='Choose your username!'/>
+    <label for='email'> Email </label>
+    <input type='email' name='email' placeholder='Enter your email!'/>
+    <label for='password'> Password </label>
+    <input type='password' name='password' placeholder='Create your password!'/>
+    <button type='submit'>Sign up</button>
   {{#if errorMessage}}
     <p>{{errorMessage}}</p>
   {{/if}}
