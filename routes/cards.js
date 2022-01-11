@@ -4,8 +4,9 @@ const router = express.Router();
 router.use(express.json())
 const authRoutes = require("../routes/auth");
 const Card = require("../models/card");
+const isLoggedIn = require("../middlewares/index")
 
-// isLoggedIn, (en router.)
+// isLoggedIn, (en router.) isLoggedIn, 
 
 router.get('/cards', (req, res, next) => {
 
