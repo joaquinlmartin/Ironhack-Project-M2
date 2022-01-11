@@ -1,16 +1,21 @@
-<div>
+<div class="image-signup">
+  <img class="image-poster" src="/images/IMG_2494.jpg" alt="">
+</div>
+<div class="text-signup">
   <h1>{{title}}</h1>
-  <h2>Sign In!</h2>
+  <h2 class="letter-signup">Sign In!</h2>
+</div>
+<div class="main-bar">
   <form action='/signup' method='POST'>
-    <label for='username'> Username </label>
-    <input type='text' name='username' placeholder='Choose your username!'/>
-    <label for='email'> Email </label>
-    <input type='email' name='email' placeholder='Enter your email!'/>
-    <label for='password'> Password </label>
-    <input type='password' name='password' placeholder='Create your password!'/>
-    <button type='submit'>Sign up</button>
-  {{#if errorMessage}}
+    <label class="label-bar" for='username'> Username </label>
+    <input class="input-bar" type='text' name='username' placeholder='Choose your username!' />
+    <label class="label-bar" for='email'> Email </label>
+    <input class="input-bar" type='email' name='email' placeholder='Enter your email!' />
+    <label class="label-bar" for='password'> Password </label>
+    <input class="input-bar" type='password' name='password' placeholder='Create your password!' />
+    <button class="btn" type='submit'>Sign up</button>
+    {{#if errorMessage}}
     <p>{{errorMessage}}</p>
-  {{/if}}
+    {{/if}}
   </form>
 </div>

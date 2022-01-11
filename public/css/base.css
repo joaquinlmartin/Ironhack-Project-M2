@@ -17,17 +17,20 @@ body {
   color: var(--dark-grey);
 }
 
+/* Home */
+
 h1 {
   font-size: 4rem;
   color: #f18546;
   letter-spacing: 0.7rem;
   font-weight: 700;
-  text-shadow: #f18546 8px -20px 9px;
+  text-shadow: #f18546 8px -10px 9px;
 }
 
 h2 {
   font-size: 3.5rem;
-  color: #f18546;
+  font-weight: 500;
+  color: #f39761;
   margin-top: 15px;
 }
 
@@ -37,6 +40,8 @@ h2 {
   justify-content: center;
   align-items: center;
   margin-top: 100px;
+  background-color: rgb(137, 238, 238);
+
 }
 
 .home-img {
@@ -45,6 +50,11 @@ h2 {
   margin-top: 50px;
   margin-bottom: 50px;
   border-radius: 5px;
+  /*background-image: url('/images/IMG_2492.jpg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 650;*/
 }
 
 .welcome-button {
@@ -55,4 +65,61 @@ h2 {
   border-radius: 5px;
   border-color: #f18546;
   text-decoration: none;
+}
+
+/* Sign-up and Login */
+.image-signup{ 
+  display: flex;  
+  align-items: center;  
+  justify-content: center;
+}
+
+.image-poster {  
+  width: 50vw;  
+  height: 70vw;
+}
+
+.text-signup {
+  display: flex;  
+  align-items: center;  
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.letter-signup {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: #f39761;
+  letter-spacing: 0.8rem;
+}
+
+.main-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10;
+}
+
+.input-bar {  
+  display: flex;
+  width: 170%; 
+  border-radius: 10px;  
+  border: thin solid #888;  
+  box-shadow: 1px 1px 1px grey;  
+  /*white-space: nowrap;*/
+  
+  margin-bottom: 1rem;
+}
+
+.label-bar {
+  color: #65aaea;
+}
+
+.btn {
+  width: 80%;
+  background-color: #65aaea;
+  letter-spacing: 0.5rem;
+  border-radius: 5px;
 }
