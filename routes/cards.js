@@ -3,7 +3,7 @@ const User = require("../models/user");
 const router = express.Router();
 router.use(express.json())
 const authRoutes = require("../routes/auth");
-const Card = require("../models/Card.model")
+const Card = require("../models/card");
 
 // isLoggedIn, (en router.)
 

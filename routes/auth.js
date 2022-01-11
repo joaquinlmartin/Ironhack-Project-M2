@@ -10,7 +10,7 @@ function authRoutes(){
     const router = express.Router();
 
 // GET signup
-router.get('/signup', (req, res) => {
+router.get('/signup',isLoggedIn, (req, res) => {
     res.render('auth/signup');
 })
 
@@ -45,7 +45,7 @@ router.post('/signup', async (req, res, next) => {
 })
 
 // GET login
-router.get('/login', (req, res) => {
+router.get('/login',isLoggedIn, (req, res) => {
     res.render('auth/login');
 })
 
