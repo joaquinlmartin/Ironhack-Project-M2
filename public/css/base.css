@@ -16,3 +16,43 @@ body {
   font-family: 'Rubik', sans-serif;
   color: var(--dark-grey);
 }
+
+h1 {
+  font-size: 4rem;
+  color: #f18546;
+  letter-spacing: 0.7rem;
+  font-weight: 700;
+  text-shadow: #f18546 8px -20px 9px;
+}
+
+h2 {
+  font-size: 3.5rem;
+  color: #f18546;
+  margin-top: 15px;
+}
+
+.welcome-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.home-img {
+  width: 400px;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+}
+
+.welcome-button {
+  background-color: #2081c3;
+  padding: 10px 20px;
+  margin: 20px 0;
+  color: #f18546;
+  border-radius: 5px;
+  border-color: #f18546;
+  text-decoration: none;
+}
