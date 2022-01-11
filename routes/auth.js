@@ -45,7 +45,7 @@ router.post('/signup', async (req, res, next) => {
 })
 
 // GET login
-router.get('/login',isLoggedIn, (req, res) => {
+router.get('/login', (req, res) => {
     res.render('auth/login');
 })
 
@@ -77,7 +77,7 @@ router.post('/login', async (req, res) => {
 })
 
 // GET logout
-router.get('/logout', isLoggedIn, (req, res) => {
+router.get('/logout', (req, res) => {
     req.session.destroy((err) => {
         if (err) {
             return res.render('error');

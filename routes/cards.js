@@ -8,7 +8,7 @@ const isLoggedIn = require("../middlewares/index")
 
 // isLoggedIn, (en router.) isLoggedIn, 
 
-router.get('/cards', (req, res, next) => {
+router.get('/cards', isLoggedIn, (req, res, next) => {
 
     Card.find({})
         .then((cards) => {
