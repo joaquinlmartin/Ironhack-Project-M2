@@ -226,7 +226,7 @@ h2 {
 }
 
 .wobbuffet-not {
-  width: 6rem;
+  width: 8rem;
 }
 
 .image-error {
@@ -234,4 +234,62 @@ h2 {
   justify-content: center;
   align-items: center;
   margin-top: 0.2rem;
+}
+
+/* Create */
+.letter-create {
+  font-size: 1.7rem;
+  color: #f18546;
+  letter-spacing: 0.4rem;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.button-create {
+  background-color: rgb(207, 207, 240);
+  padding: 3px 6px;
+  margin: 5px 0;
+  color: #2081c3;
+  border-radius: 5px;
+  border-color: #2081c3;
+  text-decoration: none;
+}
+
+.btn-create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 1rem;
+  letter-spacing: 0.1rem;
+  border-bottom: 2px solid #f18546;
+  padding-bottom: 15px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+  color: #2081c3;
+}
+input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+  width: 80%;
+  color: #2081c3;
+}
+
+.alakazam {
+  width: 6rem;
+}
+.alakazam-crt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

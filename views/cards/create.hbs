@@ -1,26 +1,38 @@
 <div class="list">
   <form action="/cards/create" method="POST">
-    <h2>Create your card</h2>
+    <h2 class="letter-create">Create your card</h2>
 
     <label for="name">Name:</label>
     <input type="text" name="name"/>
+    <br>
 
     <label for="element">Element:</label>
     <input type="text" name="element"/>
+    <br>
 
     <label for="description">Description:</label>
     <input type="text" name="description"/>
+    <br>
 
     <label for="attack">Attack:</label>
     <input type="number" name="attack"/>
+    <br>
 
     <label for="hp">HP:</label>
     <input type="number" name="hp"/>
+    <br>
 
     <label for="ability">Ability:</label>
     <input type="text" name="ability"/>
+    <br>
 
-    <button type="submit">Create your Card</button>
+    <div class="alakazam-crt">
+    <img class="alaKazam" src="/images/alakazam-mega.png" alt="alakazam image">
+    </div>
+
+    <div class="btn-create">
+      <button class="button-create" type="submit">Create your Card</button>
+    </div>
     
   </form>
 </div>
