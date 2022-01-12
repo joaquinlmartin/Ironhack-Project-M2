@@ -97,7 +97,7 @@ h2 {
 .letter-signup {
   font-size: 3.5rem;
   font-weight: 500;
-  color: #f39761;
+  color: #f18546;
   letter-spacing: 0.8rem;
 }
 
@@ -116,7 +116,6 @@ h2 {
   border: thin solid #888;  
   box-shadow: 1px 1px 1px grey;  
   /*white-space: nowrap;*/
-  
   margin-bottom: 1rem;
 }
 
@@ -132,6 +131,60 @@ h2 {
 }
 
 /* Cards */
-.image-cards{
+.title-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.letter-card {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #f18546;
+  letter-spacing: 0.8rem;
+  border-bottom: 2px solid #f18546;
+}
+
+.image-card {
   width: 10rem;
 }
+
+.cont-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.cont-text {
+  margin-top: 1rem;
+  letter-spacing: 0.1rem;
+  margin-left: 1rem;
+  margin-right: 0.4rem;
+  line-height: 1.5rem;
+  color: #2081c3;
+}
+
+.cont-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 2rem;
+  letter-spacing: 0.1rem;
+  border-bottom: 2px solid #f18546;
+  padding-bottom: 15px;
+}
+
+.button-card {
+  background-color: rgb(207, 207, 240);
+  padding: 3px 6px;
+  margin: 5px 0;
+  color: #2081c3;
+  border-radius: 5px;
+  border-color: #2081c3;
+  text-decoration: none;
+}
+
