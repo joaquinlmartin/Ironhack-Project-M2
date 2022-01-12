@@ -188,3 +188,29 @@ h2 {
   text-decoration: none;
 }
 
+/* 404 */
+.letter-not {
+  font-size: 2rem;
+  color: #f18546;
+  letter-spacing: 0.7rem;
+  font-weight: 700;
+  text-shadow: #f18546 8px -5px 9px;
+}
+
+.cont-not {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}
+
+.charizard-not {
+  width: 12rem;
+}
+
+.image-not {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
