@@ -36,7 +36,7 @@ router.post('/signup', async (req, res, next) => {
        const salt = await bcrypt.genSalt(SALT_ROUNDS);
        const hashedPassword = await bcrypt.hash(password, salt);
        await User.create({ username, email, hashedPassword });
-       return res.redirect('/');
+       return res.redirect('/login');
        } catch (err) {
         console.log(err);
           res.render('auth/signup', {errorMessage: err.message || 'Error while trying to sign up'});
@@ -70,7 +70,7 @@ router.post('/login', async (req, res) => {
                 }
             } 
             req.session.currentUser = foundUser;
-            res.redirect('/');
+            res.redirect('/cards');
         } catch (err)  {
             res.render('signup', { errorMessage: err.message || 'Please introduce email and password.'})
         };

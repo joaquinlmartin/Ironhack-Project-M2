@@ -6,6 +6,12 @@
   --dark-grey: #78746d;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -20,7 +26,7 @@ body {
 /* Home */
 
 h1 {
-  font-size: 4rem;
+  font-size: 2rem;
   color: #f18546;
   letter-spacing: 0.7rem;
   font-weight: 700;
@@ -28,10 +34,10 @@ h1 {
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #f39761;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .welcome-screen {
@@ -45,10 +51,10 @@ h2 {
 }
 
 .home-img {
-  width: 400px;
+  width: 300px;
   height: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   border-radius: 5px;
   /*background-image: url('/images/IMG_2492.jpg');
   background-position: 0 0;
@@ -60,7 +66,7 @@ h2 {
 .welcome-button {
   background-color: #2081c3;
   padding: 10px 20px;
-  margin: 20px 0;
+  margin: 5px 0;
   color: #f18546;
   border-radius: 5px;
   border-color: #f18546;
@@ -72,6 +78,7 @@ h2 {
   display: flex;  
   align-items: center;  
   justify-content: center;
+  margin-top: 2rem;
 }
 
 .image-poster {  
@@ -123,3 +130,6 @@ h2 {
   letter-spacing: 0.5rem;
   border-radius: 5px;
 }
+
+/* Cards */
+
