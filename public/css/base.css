@@ -132,4 +132,6 @@ h2 {
 }
 
 /* Cards */
-
+.image-cards{
+  width: 10rem;
+}
