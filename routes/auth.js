@@ -10,7 +10,7 @@ function authRoutes(){
     const router = express.Router();
 
 // GET signup
-router.get('/signup',isLoggedIn, (req, res) => {
+router.get('/signup', (req, res) => {
     res.render('auth/signup');
 })
 
