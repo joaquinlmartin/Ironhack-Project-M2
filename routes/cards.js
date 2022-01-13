@@ -4,7 +4,9 @@ const router = express.Router();
 router.use(express.json())
 const authRoutes = require("../routes/auth");
 const Card = require("../models/card");
+const Favorite = require('../models/favorites')
 const isLoggedIn = require("../middlewares/index")
+
 
 // isLoggedIn, (en router.) isLoggedIn, 
 
@@ -64,6 +66,23 @@ router.post('/cards/:id/delete', isLoggedIn, (req, res, next) => {
             res.redirect('/cards')
         })
         .catch(error => next(error));
+});
+
+router.get('/cards/:id/favorite', isLoggedIn, async (req, res, next) => {
+
+    const { id } = req.params;
+    const { _id: userId } = req.session.currentUser;
+
+    try {
+        // const favorites = await Favorite.find({user: user._id}).populate('card');
+        const favoriteCreated = await Favorite.create({
+            user: userId,
+            card: id,
+        });
+        res.redirect('/cards');
+    } catch (error) {
+        next(error);
+    }
 });
 
 module.exports = router;
