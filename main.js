@@ -41,4 +41,4 @@ async function run() {
   process.on('SIGTERM', stop);
 }
 
-run();
+run()

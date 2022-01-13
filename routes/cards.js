@@ -1,10 +1,14 @@
 const express = require('express');
+const User = require("../models/user");
 const router = express.Router();
 router.use(express.json())
+const authRoutes = require("../routes/auth");
+const Card = require("../models/card");
+const isLoggedIn = require("../middlewares/index")
 
-const Card = require("../models/Card.model")
+// isLoggedIn, (en router.) isLoggedIn, 
 
-router.get('/cards', (req, res, next) => {
+router.get('/cards', isLoggedIn, (req, res, next) => {
 
     Card.find({})
         .then((cards) => {
@@ -13,46 +17,46 @@ router.get('/cards', (req, res, next) => {
         .catch(error => next(error));
 });
 
-router.get('/cards/create', (req, res, next) => {
+router.get('/cards/create', isLoggedIn, (req, res, next) => {
 
     Card.create()
         .then((card) => {
-            res.render('cards/create-form', { card })
+            res.render('cards/create', { card })
         })
         .catch(error => next(error));
 });
 
-router.post('/cards/create', (req, res, next) => {
-    const { image, name, element, description, strength, health, skill, ability } = req.body;
-    Card.create({ image, name, element, description, strength, health, skill, ability })
+router.post('/cards/create', isLoggedIn, (req, res, next) => {
+    const { image, name, element, description, attack, HP, ability } = req.body;
+    Card.create({ image, name, element, description, attack, HP, ability })
         .then(() => {
             res.redirect('/cards')
         })
         .catch(error => next(error));
 });
 
-router.get('/cards/:id/edit', (req, res, next) => {
+router.get('/cards/:id/edit', isLoggedIn, (req, res, next) => {
 
     const { id } = req.params;
     Card.findById(id)
         .then((cardUpdated) => {
-            res.render('cards/update-form.hbs', { card: cardUpdated })
+            res.render('cards/update.hbs', { card: cardUpdated })
         })
         .catch(error => next(error));
 });
 
-router.post('/cards/:id/edit', (req, res, next) => {
+router.post('/cards/:id/edit', isLoggedIn, (req, res, next) => {
 
     const { id } = req.params;
-    const { image, name, element, description, strength, health, skill, ability } = req.body;
-    Card.findByIdAndUpdate(id, { image, name, element, description, strength, health, skill, ability }, { new: true })
+    const { image, name, element, description, attack, HP, ability } = req.body;
+    Card.findByIdAndUpdate(id, { image, name, element, description, attack, HP, ability }, { new: true })
         .then(() => {
             res.redirect(`/cards`)
         })
         .catch(error => next(error));
 });
 
-router.post('/cards/:id/delete', (req, res, next) => {
+router.post('/cards/:id/delete', isLoggedIn, (req, res, next) => {
 
     const { id } = req.params;
     Card.findByIdAndDelete(id)
