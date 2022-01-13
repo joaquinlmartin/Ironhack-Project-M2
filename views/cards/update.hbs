@@ -1,31 +1,32 @@
-<div>
+<div class="list">
     <form action="/cards/{{card.id}}/edit" method="post">
-        <h2>Update the card</h2>
 
-        <label> {{card.name}}
-            <input type="text" name= "name" value="{{card.name}}">
-        </label>
+        <h2 class="letter-create">Update the card</h2>
 
-        <label> Element:
-            <input type="text" name="element" value="{{card.element}}">
-        </label>
+        <label class="label-crt"> {{card.name}} </label>
+        <input class="input-crt" type="text" name= "name" value="{{card.name}}">
+        
+        <label class="label-crt"> Element: </label>
+        <input class="input-crt" type="text" name="element" value="{{card.element}}">
+        
+        <label class="label-crt"> Description: </label>
+        <input class="input-crt" type="text" name="description" value="{{card.description}}">
+        
+        <label class="label-crt"> Attack: </label>
+        <input class="input-crt" type="number" name="attack" value="{{card.attack}}">
+        
+        <label class="label-crt"> HP:  </label>
+        <input class="input-crt" type="number" name="hp" value="{{card.HP}}">
+       
+        <label class="label-crt"> Ability:  </label>
+        <input class="input-crt" type="text" name="ability" value="{{card.ability}}">
+       
+        <div class="alakazam-crt">
+            <img class="alaKazam" src="/images/alakazam-mega.png" alt="alakazam image">
+        </div>
 
-        <label> Description:
-            <input type="text" name="description" value="{{card.description}}">
-        </label>
-
-        <label> Attack:
-            <input type="number" name="attack" value="{{card.attack}}">
-        </label>
-
-        <label> HP:
-            <input type="number" name="hp" value="{{card.HP}}">
-        </label>
-
-        <label> Ability:
-            <input type="text" name="ability" value="{{card.ability}}">
-        </label>
-
-        <button type="submit">Update your Card</button>
+        <div class="btn-create">
+            <button class="button-create" type="submit">Update your Card</button>
+        </div>
     </form>
 </div>
