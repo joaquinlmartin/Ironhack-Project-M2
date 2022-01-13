@@ -10,13 +10,13 @@ const isLoggedIn = require("../middlewares/index")
 
 // isLoggedIn, (en router.) isLoggedIn, 
 
-router.get('/cards', isLoggedIn, (req, res, next) => {
-
-    Card.find({})
-        .then((cards) => {
-            res.render('cards/list', { cards: cards })
-        })
-        .catch(error => next(error));
+router.get('/cards', isLoggedIn, async (req, res, next) => {
+    try {
+       const cards = await Card.find({});
+       res.render('cards/list', { cards: cards })
+    } catch(e) {
+      next(e);
+    }
 });
 
 router.get('/cards/create', isLoggedIn, (req, res, next) => {
