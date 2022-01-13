@@ -130,6 +130,22 @@ h2 {
   border-radius: 5px;
 }
 
+.footer-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.link-footer-signup{
+  color: #65aaea;
+}
+
+.link-footer-signup a {
+  text-decoration: none;
+  color: #f18546;
+}
+
 /* List */
 .title-card {
   display: flex;
