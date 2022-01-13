@@ -293,3 +293,23 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+
+/*Nav bar*/
+.nav-bar {
+  bottom: 3;
+}
+
+.nav-bar-ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+
+.nav-bar-a {
+text-decoration: none;
+}
+
+.nav-bar-li {
+  padding: 0px 10px;
+}
