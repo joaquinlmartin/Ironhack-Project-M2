@@ -268,7 +268,7 @@ h2 {
   padding-bottom: 15px;
 }
 
-label {
+.label-crt {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -276,7 +276,7 @@ label {
   margin-bottom: 0.5rem;
   color: #2081c3;
 }
-input {
+.input-crt {
   display: flex;
   flex-direction: column;
   justify-content: center;
