@@ -45,7 +45,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 20px;
   background-color: rgb(137, 238, 238);
 
 }
@@ -54,7 +54,7 @@ h2 {
   width: 300px;
   height: auto;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border-radius: 5px;
   /*background-image: url('/images/IMG_2492.jpg');
   background-position: 0 0;
@@ -296,7 +296,7 @@ h2 {
 
 /*Nav bar*/
 .nav-bar {
-  bottom: 3;
+ margin-top: 0.7rem;
 }
 
 .nav-bar-ul {
@@ -304,10 +304,12 @@ h2 {
   display: flex;
   justify-content: space-around;
   padding: 0;
+  gap: 1.5rem;
 }
 
 .nav-bar-a {
 text-decoration: none;
+color: #2081c3;
 }
 
 .nav-bar-li {
