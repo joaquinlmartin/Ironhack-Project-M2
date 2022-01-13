@@ -151,6 +151,22 @@ h2 {
   width: 10rem;
 }
 
+.button-main-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-create-top {
+  background-color: #f1d8c9;
+  padding: 3px 20px;
+  margin: 5px 0;
+  color: #f18546;
+  border-radius: 5px;
+  border-color: #f18546;
+  text-decoration: none;
+}
+
 .cont-image {
   display: flex;
   justify-content: center;
