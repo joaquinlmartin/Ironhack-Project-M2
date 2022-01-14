@@ -62,7 +62,7 @@ router.post('/cards/:id/edit', isLoggedIn, (req, res, next) => {
     const { image, name, element, description, attack, HP, ability } = req.body;
     Card.findByIdAndUpdate(id, { image, name, element, description, attack, HP, ability }, { new: true })
         .then(() => {
-            res.redirect(`/cards`)
+            res.redirect('/cards')
         })
         .catch(error => next(error));
 });
