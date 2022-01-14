@@ -19,6 +19,15 @@ router.get('/cards', isLoggedIn, async (req, res, next) => {
     }
 });
 
+router.get('/cards/detail', isLoggedIn, async (req, res, next) => {
+    try {
+       const cards = await Card.find({});
+       res.render('cards/detail', { cards: cards })
+    } catch(e) {
+      next(e);
+    }
+});
+
 router.get('/cards/create', isLoggedIn, (req, res, next) => {
 
     Card.create()
