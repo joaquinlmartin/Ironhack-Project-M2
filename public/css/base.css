@@ -45,7 +45,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 20px;
   background-color: rgb(137, 238, 238);
 
 }
@@ -54,13 +54,8 @@ h2 {
   width: 300px;
   height: auto;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border-radius: 5px;
-  /*background-image: url('/images/IMG_2492.jpg');
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 650;*/
 }
 
 .welcome-button {
@@ -130,6 +125,22 @@ h2 {
   border-radius: 5px;
 }
 
+.footer-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.link-footer-signup{
+  color: #65aaea;
+}
+
+.link-footer-signup a {
+  text-decoration: none;
+  color: #f18546;
+}
+
 /* List */
 .title-card {
   display: flex;
@@ -149,6 +160,22 @@ h2 {
 
 .image-card {
   width: 10rem;
+}
+
+.button-main-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-create-top {
+  background-color: #f1d8c9;
+  padding: 3px 20px;
+  margin: 5px 0;
+  color: #f18546;
+  border-radius: 5px;
+  border-color: #f18546;
+  text-decoration: none;
 }
 
 .cont-image {
@@ -296,7 +323,7 @@ h2 {
 
 /*Nav bar*/
 .nav-bar {
-  bottom: 3;
+ margin-top: 0.7rem;
 }
 
 .nav-bar-ul {
@@ -304,10 +331,12 @@ h2 {
   display: flex;
   justify-content: space-around;
   padding: 0;
+  gap: 1.5rem;
 }
 
 .nav-bar-a {
 text-decoration: none;
+color: #2081c3;
 }
 
 .nav-bar-li {

@@ -4,9 +4,6 @@ const cardSchema = new mongoose.Schema({
 
   image: {
     type: String,
-    // required: [true, 'image is required'],
-    // unique: [true],
-    // enum: [],
   },
   name: {
     type: String,
@@ -28,7 +25,7 @@ const cardSchema = new mongoose.Schema({
   },
   HP: {
     type: Number,
-    // required: [true, 'HP is required'],
+    required: [true, 'HP is required'],
   },
   ability: {
     type: String,
