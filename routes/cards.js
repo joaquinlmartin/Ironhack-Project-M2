@@ -19,10 +19,12 @@ router.get('/cards', isLoggedIn, async (req, res, next) => {
     }
 });
 
-router.get('/cards/detail', isLoggedIn, async (req, res, next) => {
+router.get('/cards/:id/detail', isLoggedIn, async (req, res, next) => {
+    const { id } = req.params;
     try {
-       const cards = await Card.find({});
-       res.render('cards/detail', { cards: cards })
+       const card = await Card.findById(id);
+       console.log(card);
+       res.render('cards/detail', { card })
     } catch(e) {
       next(e);
     }

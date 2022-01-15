@@ -3,31 +3,28 @@
 </div>
 
 <div>
-    
-  {{#each cards}}
+  <div class='cont-image'>
+    <img class='image-card' src='{{card.image}}' alt='{{name}}' />
+  </div>
 
-    <div class='cont-image'>
-      <img class='image-card' src='{{image}}' alt='{{name}}' />
-    </div>
+  <div class='cont-text'>
+    <h3><u>Name:</u> {{card.name}}</h3>
+    <h3><u>Element:</u> {{card.element}}</h3>
+    <h3><u>Description:</u> {{card.description}}</h3>
+    <h3><u>Attack:</u> {{card.attack}}</h3>
+    <h3><u>HP:</u> {{card.HP}}</h3>
+    <h3><u>Ability:</u> {{card.ability}}</h3>
+  </div>
 
-    <div class='cont-text'>
-      <h3><u>Name:</u> {{name}}</h3>
-      <h3><u>Element:</u> {{element}}</h3>
-      <h3><u>Description:</u> {{description}}</h3>
-      <h3><u>Attack:</u> {{attack}}</h3>
-      <h3><u>HP:</u> {{HP}}</h3>
-      <h3><u>Ability:</u> {{ability}}</h3>
-    </div>
-
-    <div class='cont-button'>
-      <button class='button-card'><a href='/cards/{{_id}}/edit'>Edit Card</a></button>
-      <br />
-      <form action='/cards/{{_id}}/delete' method='post'>
-        <button class='button-card'>Delete Card</button>
-      </form>
-      <button class='button-card'><a href='/cards/{{_id}}/favorite'>Favorite</a></button>
-    </div>
-
-  {{/each}}
+  <div class='cont-button'>
+    <button class='button-card'><a href='/cards/{{card._id}}/edit'>Edit Card</a></button>
+    <br />
+    <form action='/cards/{{card._id}}/delete' method='post'>
+      <button class='button-card'>Delete Card</button>
+    </form>
+    <button class='button-card'><a
+        href='/cards/{{card._id}}/favorite'
+      >Favorite</a></button>
+  </div>
 
 </div>

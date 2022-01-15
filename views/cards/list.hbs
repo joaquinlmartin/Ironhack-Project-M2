@@ -8,7 +8,11 @@
   {{#each cards}}
 
     <div class='cont-image'>
-      <a href='/cards/detail'><img class='image-card'  src='{{image}}' alt='{{name}}' /></a>
+      <a href='/cards/{{_id}}/detail'><img
+          class='image-card'
+          src='{{image}}'
+          alt='{{name}}'
+        /></a>
     </div>
 
     <div class='cont-text'>
