@@ -1,0 +1,24 @@
+<div class="image-signup">
+  <img class="image-poster" src="/images/IMG_2485.jpg" alt="">
+</div>
+<div class="text-signup">
+  <h1>{{title}}</h1>
+  <h2 class="letter-signup">Welcome</h2>
+</div>
+<div class="main-bar">
+  <form action='/login' method='POST'>
+    <label class="label-bar" for='email'> Email </label>
+    <input class="input-bar" type='email' name='email' placeholder='Your email go here!' />
+    <label class="label-bar" for='password'> Password </label>
+    <input class="input-bar" type='password' name='password' placeholder='Your password go here!' />
+    <button class="btn" type='submit'>login</button>
+    {{#if errorMessage}}
+    <p>{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div>
+<footer class="footer-login">
+  <h4 class="link-footer-signup">
+    If you don't have account, <a href="/auth/signup">Sign up!</a>
+  </h4>
+</footer>

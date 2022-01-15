@@ -1,0 +1,23 @@
+<div class='title-card'>
+  <h2 class='letter-card'>Pokkemon Cards</h2>
+</div>
+<div class='button-main-top'>
+  <button class='button-create-top'><a href='/cards/create'>Create Card</a></button>
+</div>
+<div>
+  {{#each cards}}
+
+    <div class='cont-image'>
+      <a href='/cards/{{_id}}/detail'><img
+          class='image-card'
+          src='{{image}}'
+          alt='{{name}}'
+        /></a>
+    </div>
+
+    <div class='cont-text'>
+      <h3> {{name}}</h3>
+    </div>
+
+  {{/each}}
+</div>

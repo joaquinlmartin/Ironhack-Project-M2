@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "seed:insert-courses": "node scripts/index.js",
-    "start:watch": "nodemon main.js",
+    "seed": "node seeds/cards.seed.js",
+    "dev": "nodemon main.js",
     "start": "node main.js"
   },
   "keywords": [],
@@ -19,6 +19,7 @@
     "express": "^4.17.1",
     "express-session": "^1.17.2",
     "hbs": "^4.2.0",
+    "mongo": "^0.1.0",
     "mongoose": "^6.1.0",
     "morgan": "^1.10.0"
   },
