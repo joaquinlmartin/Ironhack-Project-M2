@@ -16,17 +16,8 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'password is required'],
   },
-  // favorites: {
-  //   type: [mongoose.Schema.ObjectId],
-  //   ref: 'Card',
-  // }
 });
 
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
-
-
-// get('/cards/:id/favorite', isLoggedIn,) {
-//   User.favorites.push(req.params.id).populate('favorites');
-// };

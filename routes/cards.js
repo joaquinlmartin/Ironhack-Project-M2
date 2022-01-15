@@ -8,7 +8,6 @@ const Favorite = require('../models/favorites')
 const isLoggedIn = require("../middlewares/index")
 
 
-// isLoggedIn, (en router.) isLoggedIn, 
 
 router.get('/cards', isLoggedIn, async (req, res, next) => {
     try {
@@ -85,7 +84,6 @@ router.get('/cards/:id/favorite', isLoggedIn, async (req, res, next) => {
     const { _id: userId } = req.session.currentUser;
 
     try {
-        // const favorites = await Favorite.find({user: user._id}).populate('card');
         const favoriteCreated = await Favorite.create({
             user: userId,
             card: id,

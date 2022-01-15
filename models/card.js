@@ -4,9 +4,6 @@ const cardSchema = new mongoose.Schema({
 
   image: {
     type: String,
-    // required: [true, 'image is required'],
-    // unique: [true],
-    // enum: [],
   },
   name: {
     type: String,
