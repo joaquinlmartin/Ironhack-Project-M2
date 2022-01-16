@@ -147,7 +147,7 @@ h2 {
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .letter-card {
@@ -170,12 +170,18 @@ h2 {
 
 .button-create-top {
   background-color: #f1d8c9;
-  padding: 3px 20px;
+  padding: 3px 40px;
   margin: 5px 0;
   color: #f18546;
   border-radius: 5px;
   border-color: #f18546;
   text-decoration: none;
+}
+
+.button-create-top a {
+  color: #f18546;
+  text-decoration: none;
+  letter-spacing: 0.6rem;
 }
 
 .cont-image {
