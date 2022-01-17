@@ -206,7 +206,6 @@ h2 {
   align-items: center;
   gap: 1.2rem;
   margin-top: 2rem;
-  letter-spacing: 0.1rem;
   border-bottom: 2px solid #f18546;
   padding-bottom: 15px;
 }
@@ -216,10 +215,18 @@ h2 {
   padding: 3px 6px;
   margin: 5px 0;
   color: #2081c3;
+  letter-spacing: 0.1rem;
   border-radius: 5px;
   border-color: #2081c3;
   text-decoration: none;
 }
+
+.button-card a {
+  text-decoration: none;
+  color: #2081c3;
+  letter-spacing: 0.1rem;
+}
+
 
 /* 404 */
 .letter-not {
