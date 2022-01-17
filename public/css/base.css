@@ -45,7 +45,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 20px;
   background-color: rgb(137, 238, 238);
 
 }
@@ -54,13 +54,8 @@ h2 {
   width: 300px;
   height: auto;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border-radius: 5px;
-  /*background-image: url('/images/IMG_2492.jpg');
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 650;*/
 }
 
 .welcome-button {
@@ -130,13 +125,29 @@ h2 {
   border-radius: 5px;
 }
 
+.footer-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.link-footer-signup{
+  color: #65aaea;
+}
+
+.link-footer-signup a {
+  text-decoration: none;
+  color: #f18546;
+}
+
 /* List */
 .title-card {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .letter-card {
@@ -149,6 +160,28 @@ h2 {
 
 .image-card {
   width: 10rem;
+}
+
+.button-main-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-create-top {
+  background-color: #f1d8c9;
+  padding: 3px 40px;
+  margin: 5px 0;
+  color: #f18546;
+  border-radius: 5px;
+  border-color: #f18546;
+  text-decoration: none;
+}
+
+.button-create-top a {
+  color: #f18546;
+  text-decoration: none;
+  letter-spacing: 0.6rem;
 }
 
 .cont-image {
@@ -173,7 +206,6 @@ h2 {
   align-items: center;
   gap: 1.2rem;
   margin-top: 2rem;
-  letter-spacing: 0.1rem;
   border-bottom: 2px solid #f18546;
   padding-bottom: 15px;
 }
@@ -183,10 +215,18 @@ h2 {
   padding: 3px 6px;
   margin: 5px 0;
   color: #2081c3;
+  letter-spacing: 0.1rem;
   border-radius: 5px;
   border-color: #2081c3;
   text-decoration: none;
 }
+
+.button-card a {
+  text-decoration: none;
+  color: #2081c3;
+  letter-spacing: 0.1rem;
+}
+
 
 /* 404 */
 .letter-not {
@@ -296,7 +336,7 @@ h2 {
 
 /*Nav bar*/
 .nav-bar {
-  bottom: 3;
+ margin-top: 0.7rem;
 }
 
 .nav-bar-ul {
@@ -304,10 +344,12 @@ h2 {
   display: flex;
   justify-content: space-around;
   padding: 0;
+  gap: 1.5rem;
 }
 
 .nav-bar-a {
 text-decoration: none;
+color: #2081c3;
 }
 
 .nav-bar-li {

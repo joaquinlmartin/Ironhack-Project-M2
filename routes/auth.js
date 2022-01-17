@@ -2,7 +2,6 @@ const express = require("express");
 const User = require("../models/user");
 const bcrypt = require('bcryptjs');
 const isLoggedIn = require('../middlewares');
-//const { router } = require("express/lib/application");
 
 const SALT_ROUNDS = 10;
 
@@ -10,7 +9,7 @@ function authRoutes(){
     const router = express.Router();
 
 // GET signup
-router.get('/signup',isLoggedIn, (req, res) => {
+router.get('/signup', (req, res) => {
     res.render('auth/signup');
 })
 
@@ -29,10 +28,6 @@ router.post('/signup', async (req, res, next) => {
     }
       try {
        const dbUser = await User.findOne({ username: username })
-        // Anulado porque da error el signup(se cambió por el async-await) 
-        // if (dbUser) {
-        //     throw new Error('You have to choose another username!')
-        // }
        const salt = await bcrypt.genSalt(SALT_ROUNDS);
        const hashedPassword = await bcrypt.hash(password, salt);
        await User.create({ username, email, hashedPassword });
