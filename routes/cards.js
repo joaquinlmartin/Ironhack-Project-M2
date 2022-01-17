@@ -39,8 +39,8 @@ router.get('/cards/create', isLoggedIn, (req, res, next) => {
 });
 
 router.post('/cards/create', isLoggedIn, (req, res, next) => {
-    const { image, name, element, description, attack, HP, ability } = req.body;
-    Card.create({ image, name, element, description, attack, HP, ability })
+    const { image, name, element, description, attack, hp, ability } = req.body;
+    Card.create({ image, name, element, description, attack, HP: hp, ability })
         .then(() => {
             res.redirect('/cards')
         })
