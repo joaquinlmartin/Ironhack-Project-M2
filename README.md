@@ -12,7 +12,7 @@ A pokemon searching cards app where people can share Pokemon cards and collect y
 
 - 404: As a user I can see a 404 page if I try to reach a page that does not exist so that I know it's my fault
 
-- Sign up: As an user I can sign up in the platform
+- Sign up: As an user I can sign up in the platform.
 
 - Login: As a user I can login to the platform and go to my profile/dashboard.
 
@@ -80,3 +80,6 @@ Card Poke model
 
 ## Links
 https://github.com/joaquinlmartin/Project-M2
+
+# Deploy
+https://ironhack-project-js.herokuapp.com/

@@ -1,23 +1,23 @@
-<h2>Available cards</h2>
+<div class='title-card'>
+  <h2 class='letter-card'>Pokkemon Cards</h2>
+</div>
+<div class='button-main-top'>
+  <button class='button-create-top'><a  href='/cards/create'>Create Card</a></button>
+</div>
+<div>
+  {{#each cards}}
 
-<a href="/cards/create">Create Card</a>
-
-<div class="list">
-    {{#each cards}}
-
-    <div class='cards-create-list'>
-        <h3>Name: {{name}}</h3>
-        <h3>Element: {{element}}</h3>
-        <h3>Description: {{description}}</h3>
-        <h3>Strength: {{strength}}</h3>
-        <h3>Health: {{health}}</h3>
-        <h3>Skill: {{skill}}</h3>
-        <h3>Ability: {{ability}}</h3>
-        <a href='/cards/{{_id}}/edit'>Edit Card</a>
-        <br>
-        <form action='/cards/{{_id}}/delete' method="post">
-            <button>Delete card</button>
-        </form>
+    <div class='cont-image'>
+      <a href='/cards/{{_id}}/detail'><img
+          class='image-card'
+          src='{{image}}'
+          alt='{{name}}'
+        /></a>
     </div>
-    {{/each}}
+
+    <div class='cont-text'>
+      <h3> {{name}}</h3>
+    </div>
+
+  {{/each}}
 </div>

@@ -4,8 +4,8 @@
   "description": "*Ironhack-Project-M2*",
   "main": "index.js",
   "scripts": {
-    "seed:insert-courses": "node scripts/index.js",
-    "start:watch": "nodemon main.js",
+    "seed": "node seeds/cards.seed.js",
+    "dev": "nodemon main.js",
     "start": "node main.js"
   },
   "keywords": [],

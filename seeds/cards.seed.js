@@ -1,26 +1,29 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+const dotenv = require('dotenv').config();
 const MONGO_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/Ironhack-Project-M2';
-const Card = require('../models/Card.model')
+const Card = require('../models/card');
 
 const cards = [
-    { image: "", name: "Charmander",  element: "fire", description: "Prefers hot things. They say that when it rains steam comes out of the tip of its tail.", attack: 52, HP: 39, ability: "Flames Sea"},
-    
+    { image: "https://img.pokemondb.net/artwork/large/charmander.jpg", name: "Charmander",  element: "fire", description: "Prefers hot things. They say that when it rains steam comes out of the tip of its tail.", attack: 52, HP: 39, ability: "Flames Sea"},
+    { image: "https://img.pokemondb.net/artwork/large/pikachu.jpg", name: "Pikachu",  element: "electric", description: "When several of these POKKéMON gather, their electricity could build and cause lightning storms.", attack: 55, HP: 35, ability: "Static"},
+    { image: "https://img.pokemondb.net/artwork/large/zubat.jpg", name: "Zubat",  element: "poison", description: "Forms colonies in perpetually dark places. Uses ultrasonic waves to identify and approach targets.", attack: 45, HP: 40, ability: "Inner Focus"},
+    { image: "https://img.pokemondb.net/artwork/large/bulbasaur.jpg", name: "Bulbasaur",  element: "grass", description: "A strange seed was planted on its back at birth. The plant sprouts and grows with this POKKéMON.", attack: 49, HP: 45, ability: "Overgrow"},
+    { image: "https://img.pokemondb.net/artwork/large/squirtle.jpg", name: "Squirtle",  element: "water", description: "After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth.", attack: 44, HP: 48, ability: "Torrent"},
   ];
-
+  
   mongoose.connect(MONGO_URI, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true
+    useUnifiedTopology: true
     })
     .then(()=>{
+      console.log("Connected to", MONGO_URI);
       return Card.deleteMany();
     })
     .then (()=>{
       console.log(`Deleted all the cards`);
     })
     .then(()=>{
-      return Card.create(drones);
+      return Card.create(cards);
     })
     .then((cardsFromDB)=>{
       console.log(`Created ${cardsFromDB.length} cards`);
