@@ -33,7 +33,7 @@ const cardSchema = new mongoose.Schema({
 });
 
 cardSchema.pre('save', async function (next) {
-  if(this.attack + this.HP < 100){
+  if(this.attack + this.HP <= 100){
     next();
   } else {
     throw new Error('Danger! Attack and HP in Pokkemon Card cannot be higher than 100!');
