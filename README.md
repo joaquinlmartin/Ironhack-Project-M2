@@ -6,7 +6,7 @@
 
 ## Description 
 
-A pokemon searching cards app where people can share Pokemon cards and collect your favorites ones and show in your profile.
+A pokemon searching cards app where people can create Pokemon cards and collect your favorites ones and show them in your profile.
 
 ## User Actions
 
@@ -26,7 +26,6 @@ A pokemon searching cards app where people can share Pokemon cards and collect y
 - auth.login(user)
 - auth.signup(user)
 - auth.logout()
-- auth.getUser() // synchronous
 
 ### Models
 ```js
@@ -46,12 +45,9 @@ Card Poke model
 	name: String ,
 	element: String,
 	description: String,
-	atribute1: String,
-	atribute2: String,
-	atribute3: String,
-	skill: String,
+	attack: Number,
+	HP: Number,
 	ability: String,
-	class: String,
 }
 ```
 
@@ -68,8 +64,7 @@ Card Poke model
 | `GET`      | `auth/signup-user`                  | Renders `signup` form view for user.                         | 201            | 404          |                        |
 | `POST`     | `auth/signup-user`                  | Sends Sign Up info to the server and creates user in the DB  | 201            | 404          | { email, password }    |         |
 | `GET`      | `/private/userprofile`              | Shows user profile details with cards                        |                |              |                        |
-| `GET`      | `/private/edit-userprofile`         | Private route. Shows`edit-profile user` form                 |                |              |               
-                 
+| `GET`      | `/private/edit-userprofile`         | Private route. Shows`edit-profile user` form                 |                |              |                        |               
 
 <br>
 
