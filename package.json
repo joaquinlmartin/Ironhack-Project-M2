@@ -1,11 +1,11 @@
 {
-  "name": "express-demo",
+  "name": "Pokemon app",
   "version": "1.0.0",
-  "description": "*Ironhack-Project-M2*",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "seed": "node seeds/cards.seed.js",
-    "dev": "nodemon main.js",
+    "seed:insert-courses": "node scripts/index.js",
+    "start:watch": "nodemon main.js",
     "start": "node main.js"
   },
   "keywords": [],
@@ -30,13 +30,5 @@
     "eslint-plugin-prettier": "^4.0.0",
     "nodemon": "^2.0.15",
     "prettier": "^2.5.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/joaquinlmartin/Ironhack-Project-M2.git"
-  },
-  "bugs": {
-    "url": "https://github.com/joaquinlmartin/Ironhack-Project-M2/issues"
-  },
-  "homepage": "https://github.com/joaquinlmartin/Ironhack-Project-M2#readme"
+  }
 }
