@@ -26,7 +26,6 @@ A pokemon searching cards app where people can create Pokemon cards and collect 
 - auth.login(user)
 - auth.signup(user)
 - auth.logout()
-- auth.getUser() // synchronous
 
 ### Models
 ```js
