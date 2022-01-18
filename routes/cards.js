@@ -18,6 +18,15 @@ router.get('/cards', isLoggedIn, async (req, res, next) => {
     }
 });
 
+router.get('/profile', isLoggedIn, async (req, res, next) => {
+    try {
+       const cards = await Card.find({});
+       res.render('profile', { cards: cards })
+    } catch(e) {
+      next(e);
+    }
+});
+
 router.get('/cards/:id/detail', isLoggedIn, async (req, res, next) => {
     const { id } = req.params;
     try {
