@@ -192,6 +192,8 @@ h2 {
 }
 
 .cont-text {
+  display: flex;
+  justify-content: center;
   margin-top: 1rem;
   letter-spacing: 0.1rem;
   margin-left: 1rem;
@@ -282,9 +284,9 @@ h2 {
   color: #f18546;
   letter-spacing: 0.4rem;
   font-weight: 700;
-  margin-top: 3rem;
+  margin-top: 1rem;
   margin-left: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .button-create {
@@ -302,7 +304,6 @@ h2 {
   justify-content: center;
   align-items: center;
   gap: 1.2rem;
-  margin-top: 1rem;
   letter-spacing: 0.1rem;
   border-bottom: 2px solid #f18546;
   padding-bottom: 15px;
@@ -313,7 +314,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   margin-left: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
   color: #2081c3;
 }
 .input-crt {
@@ -325,6 +326,15 @@ h2 {
   color: #2081c3;
 }
 
+.input-crt-last {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+  width: 80%;
+  color: #2081c3;
+  margin-bottom: 1rem;
+}
 .alakazam {
   width: 6rem;
 }
