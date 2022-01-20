@@ -19,9 +19,11 @@ router.get('/cards', isLoggedIn, async (req, res, next) => {
 });
 
 router.get('/profile', isLoggedIn, async (req, res, next) => {
+    const user = req.session.currentUser;
     try {
-       const cards = await Card.find({});
-       res.render('profile', { cards: cards })
+       const favs = await Favorite.find({ user: user._id }).populate('card');
+       console.log(favs);
+       res.render('profile', { cards: favs, user })
     } catch(e) {
       next(e);
     }
@@ -97,7 +99,7 @@ router.get('/cards/:id/favorite', isLoggedIn, async (req, res, next) => {
             user: userId,
             card: id,
         });
-        res.redirect('/cards');
+        res.redirect('/profile');
     } catch (error) {
         next(error);
     }

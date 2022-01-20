@@ -86,16 +86,16 @@ router.get('/user.profile', isLoggedIn, (req, res) => {
     res.render('user/user.profile', { userInSession: req.session.user });
 })
 
-router.get("/card/:id", isLoggedIn, async(req, res, next) => {
-    const user = req.session.currentUser;
-    console.log('user', user);
-    try {
-        const favorites = await Favorite.find({user: user._id}).populate({card: id});
-        res.render("profile.hbs", { favorites });
-    } catch (err) {
-        next(err);
-    }
-})
+// router.get("/card/:id", isLoggedIn, async(req, res, next) => {
+//     const user = req.session.currentUser;
+//     console.log('user', user);
+//     try {
+//         const favorites = await Favorite.find({user: user._id}).populate({card: id});
+//         res.render("profile.hbs", { favorites });
+//     } catch (err) {
+//         next(err);
+//     }
+// })
 
  return router;
 }
