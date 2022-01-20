@@ -2,11 +2,20 @@
   <h2 class='letter-card'>Profile</h2>
 </div>
 
-<div>
-  
+<div class='cont-image'>
+  <img class='image-card' src='{{this.image_url}}' alt='{{this.name}}' />
 </div>
 
-<div class="nav-bar">
+<div class='cont-text'>
+  <h3><u>Name:</u> {{this.name}}</h3>
+  <h3><u>Element:</u> {{this.element}}</h3>
+  <h3><u>Description:</u> {{this.description}}</h3>
+  <h3><u>Attack:</u> {{this.attack}}</h3>
+  <h3><u>HP:</u> {{this.HP}}</h3>
+  <h3><u>Ability:</u> {{this.ability}}</h3>
+</div>
+
+<div class="nav-bar-profile">
   <ul class="nav-bar-ul">
     <li class="nav-bar-li"><a class="nav-bar-a" href="/">Home</a></li>
     <li class="nav-bar-li"><a class="nav-bar-a" href="/cards/create">Create</a></li>
