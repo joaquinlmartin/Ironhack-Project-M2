@@ -191,18 +191,15 @@ h2 {
   margin-top: 3rem;
 }
 
-.cont-text {
+.cont-name {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: center; 
   margin-top: 1rem;
   letter-spacing: 0.1rem;
   margin-left: 1rem;
   margin-right: 0.4rem;
-  color: #2081c3;
-  gap: 0.5rem;
+  color: #2081c3; 
 }
-
 
 .cont-button{
   display: flex;
@@ -229,6 +226,19 @@ h2 {
   text-decoration: none;
   color: #2081c3;
   letter-spacing: 0.1rem;
+}
+
+/* Detail */
+.cont-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  letter-spacing: 0.1rem;
+  margin-left: 1rem;
+  margin-right: 0.4rem;
+  color: #2081c3;
+  gap: 0.5rem;
 }
 
 
@@ -286,7 +296,7 @@ h2 {
   color: #f18546;
   letter-spacing: 0.4rem;
   font-weight: 700;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-left: 2rem;
   margin-bottom: 1rem;
 }
@@ -335,7 +345,7 @@ h2 {
   margin-left: 2rem;
   width: 80%;
   color: #2081c3;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .alakazam {
   width: 6rem;
@@ -346,10 +356,53 @@ h2 {
   align-items: center;
 }
 
+/* Update */
+.input-crt-update {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  width: 80%;
+  color: #2081c3;
+}
+
 /*Nav bar*/
 .nav-bar {
  margin-top: 0.7rem;
 }
+
+.nav-bar-signup {
+  margin-top: 3.9rem;
+ }
+
+ .nav-bar-login {
+  margin-top: 4.2rem;
+ }
+
+ .nav-bar-list {
+  margin-top: 1.5rem;
+ }
+
+ .nav-bar-create {
+  margin-top: 1rem;
+ }
+
+ .nav-bar-update {
+  margin-top: 5rem;
+ }
+
+ .nav-bar-detail {
+  margin-top: 7rem;
+ }
+
+ .nav-bar-notfound {
+  margin-top: 13rem;
+ }
+
+ .nav-bar-error {
+  margin-top: 8rem;
+ }
 
 .nav-bar-ul {
   list-style: none;
