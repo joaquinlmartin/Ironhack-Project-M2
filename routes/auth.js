@@ -2,6 +2,7 @@ const express = require("express");
 const User = require("../models/user");
 const bcrypt = require('bcryptjs');
 const isLoggedIn = require('../middlewares');
+const Favorite = require("../models/favorites");
 
 const SALT_ROUNDS = 10;
 
@@ -83,6 +84,17 @@ router.get('/logout', (req, res) => {
 
 router.get('/user.profile', isLoggedIn, (req, res) => {
     res.render('user/user.profile', { userInSession: req.session.user });
+})
+
+router.get("/card/:id", isLoggedIn, async(req, res, next) => {
+    const user = req.session.currentUser;
+    console.log('user', user);
+    try {
+        const favorites = await Favorite.find({user: user._id}).populate({card: id});
+        res.render("profile.hbs", { favorites });
+    } catch (err) {
+        next(err);
+    }
 })
 
  return router;
