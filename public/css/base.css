@@ -194,13 +194,15 @@ h2 {
 .cont-text {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   margin-top: 1rem;
   letter-spacing: 0.1rem;
   margin-left: 1rem;
   margin-right: 0.4rem;
-  line-height: 1.5rem;
   color: #2081c3;
+  gap: 0.5rem;
 }
+
 
 .cont-button{
   display: flex;
