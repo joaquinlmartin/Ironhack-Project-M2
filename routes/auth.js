@@ -28,7 +28,7 @@ router.post('/signup', async (req, res, next) => {
         return res.status(400).render('auth/signup', { errorMessage: 'Password not secure, try another one' }); 
     }
       try {
-       const dbUser = await User.findOne({ username: username })
+       const dbUser = await User.findOne({ user: username })
        const salt = await bcrypt.genSalt(SALT_ROUNDS);
        const hashedPassword = await bcrypt.hash(password, salt);
        await User.create({ username, email, hashedPassword });
