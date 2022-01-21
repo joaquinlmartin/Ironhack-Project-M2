@@ -63,7 +63,7 @@ router.get('/cards/:id/edit', isLoggedIn, (req, res, next) => {
     const { id } = req.params;
     Card.findById(id)
         .then((cardUpdated) => {
-            res.render('cards/update.hbs', { card: cardUpdated })
+            res.render('cards/update', { card: cardUpdated })
         })
         .catch(error => next(error));
 });
@@ -71,8 +71,8 @@ router.get('/cards/:id/edit', isLoggedIn, (req, res, next) => {
 router.post('/cards/:id/edit', isLoggedIn, (req, res, next) => {
 
     const { id } = req.params;
-    const { image, name, element, description, attack, HP, ability } = req.body;
-    Card.findByIdAndUpdate(id, { image, name, element, description, attack, HP, ability }, { new: true })
+    const { image, name, element, description, attack, hp, ability } = req.body;
+    Card.findByIdAndUpdate(id, { image, name, element, description, attack, HP: hp, ability }, { new: true })
         .then(() => {
             res.redirect('/cards')
         })
