@@ -229,6 +229,12 @@ h2 {
 }
 
 /* Detail */
+.title-profile {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
 .cont-text {
   display: flex;
   justify-content: center;
@@ -239,6 +245,13 @@ h2 {
   margin-right: 0.4rem;
   color: #2081c3;
   gap: 0.5rem;
+}
+
+.letter-profile {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #f39761;
+  margin-top: 10px;
 }
 
 
