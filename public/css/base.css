@@ -321,6 +321,13 @@ h2 {
   padding-bottom: 15px;
 }
 
+.btn-logout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
 .label-crt {
   display: flex;
   flex-direction: column;
@@ -397,7 +404,7 @@ h2 {
  }
 
  .nav-bar-profile {
-  margin-top: 14rem;
+   margin-top: 2rem;
  }
 
  .nav-bar-notfound {
