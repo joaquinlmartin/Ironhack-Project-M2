@@ -53,8 +53,6 @@ Card Poke model
 
 ## Routes
 
-
-|            |                                     |                                                              |                |              |                        |
 | ---------- | ----------------------------------- | ------------------------------------------------------------ | -------------- | ------------ | ---------------------- |
 | **Method** | **Route**                           | **Description**                                              | Success status | Error status | Request - Body         |
 | `GET`      | `/`                                 | Main Pokemon page route.                                     |                |              |                        |
