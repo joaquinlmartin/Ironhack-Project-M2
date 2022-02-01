@@ -68,7 +68,6 @@ Card Poke model
 <br>
 
 ## Backlog
-
 -  Social Network
 -  Meeting point trough the map view
 
