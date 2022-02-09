@@ -39,7 +39,7 @@ User model
 
 Card Poke model
 
-{ 
+{
 	cardID: Number,
 	image: String,
 	name: String ,
