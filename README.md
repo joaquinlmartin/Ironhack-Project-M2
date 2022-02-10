@@ -75,4 +75,4 @@ Card Poke model
 https://github.com/joaquinlmartin/Project-M2
 
 # Deploy
-https://ironhack-project-js.herokuapp.com/
+https://ironhack-project-js.herokuapp.com/ 
